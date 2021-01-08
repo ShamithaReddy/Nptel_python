@@ -1,0 +1,63 @@
+1) Suppose u and v both denote sets in Python. What is the most general condition that guarantees that u - (v - u) == u?
+ (a) The sets u and v should be disjoint.
+ (b) The set v should be a subset of the set u.
+ (c) The set u should be a subset of the set v.
+ (d) This is true for any u and v.
+ Ans: (d)
+ Feedback: v - u, by definition, has no elements from u. Hence u - (v - u) does not remove any elements from u.
+ 
+2) Suppose u and v both denote sets in Python. What is the most general condition that guarantees that u|v == u^v?
+ (a) The sets u and v should be disjoint.
+ (b) The set u should be a subset of the set v.
+ (c) The set v should be a subset of the set u.
+ (d) This is true for any u and v.
+ Ans: (a)
+ Feedback:
+ u^v has all elements that are in exactly one of u or v. This is the same as u|v - u&v. Since u^v = u|v, we have u&v is empty, so u and v are disjoint.
+ 
+3) Suppose we insert 19 into the min heap [17,25,42,67,38,89,54,98,89]. What is the resulting heap?
+    Ans: [17,19,42,67,25,89,54,98,89,38]
+    
+4)Suppose we execute delete-min twice on the min-heap [13,29,24,67,52,89,45,98.79,58]. What is the resulting heap?
+  Feedback:
+The original heap is:
+
+             13
+          /      \
+      29            24
+    /    \        /    \
+  67      52    89      45
+ /  \    /  
+98  79  58
+After one delete-min, we have:
+
+             24
+          /      \
+      29            45
+    /    \        /    \
+  67      52    89      58
+ /  \  
+98  79
+After the second delete-min, we have:
+
+             29
+          /      \
+      52            45
+    /    \        /    \
+  67      79    89      58
+ / 
+98
+Ans:[29,52,45,67,79,89,58,98]
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
