@@ -1,0 +1,54 @@
+1) What does h(19685) return for the following function definition?
+
+    def h(x):
+      (d,n) = (1,0)
+      while d <= x:
+        (d,n) = (d*3,n+1)
+      return(n)
+Ans: 10
+
+2) What is g(36) - g(35), given the definition of g below?
+
+    def g(n): 
+      s=0
+      for i in range(2,n):
+        if n%i == 0:
+           s = s+1
+      return(s)
+Ans: 5
+
+3) Consider the following function f.
+
+    def f(n): 
+      s=0
+      for i in range(1,n+1):
+        if n//i == i and n%i == 0:
+           s = 1
+      return(s%2 == 1)
+
+  The function f(n) given above returns True for a positive number n if and only if:
+
+ (a) n is an odd number.
+ (b) n is a prime number.
+ (c) n is a perfect square.
+ (d) n is a composite number.
+ Ans: (c)
+ Feedback:
+ f(n) sets s to 1 if there is a number i such that i*i == n.
+
+4) Consider the following function fpp.
+
+  def foo(m):
+    if m == 0:
+      return(0)
+    else:
+      return(m+foo(m-1))
+Which of the following is correct?
+
+ (a) The function always terminates with f(n) = factorial of n
+ (b) The function always terminates with f(n) = n(n+1)/2
+ (c) The function terminates for non­negative n with f(n) = factorial of n
+ (d) The function terminates for non­negative n with f(n) = n(n+1)/2
+Ans: (d)
+Feedback:
+If m is negative, the function does not terminate. Otherwise, it computes 1+2+..+m = m(m+1)/2.
